@@ -46,7 +46,7 @@ function App() {
         <div className="flex-large">
           {editing ? (
             <div>
-              <h2>Editar Usuario</h2>
+              <h2 className="text-center m-3">Editar Usuario</h2>
               <EditUserForm currentUser={currentUser} updataUser={updataUser} />
             </div>
           ) : (

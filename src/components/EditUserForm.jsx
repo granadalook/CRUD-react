@@ -24,25 +24,31 @@ const EditUserForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Nombre</label>
       <input
+        className="form-control"
         type="text"
         name="name"
         {...register("name", {
-          required: { value: true, message: "nombre Requerido" },
+          required: { value: true, message: "NOMBRE REQUERIDO" },
         })}
       />
+      <hr />
       <div>{errors?.name?.message}</div>
-      <label>Usuario</label>
+
       <input
+        className="form-control"
         type="text"
         name="username"
         {...register("username", {
-          required: { value: true, message: "nombre de usuario Requerido" },
+          required: { value: true, message: "USUARIO REQUERIDO" },
         })}
       />
       <div>{errors?.username?.message}</div>
-      <button type="submit">Editar Ususario</button>
+      <div className="d-grid gap-2 col-6 mx-auto">
+        <button type="submit" className="btn btn-warning m-3 btn-lg ">
+          Editar Ususario
+        </button>
+      </div>
     </form>
   );
 };
