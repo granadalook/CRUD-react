@@ -51,7 +51,7 @@ function App() {
             </div>
           ) : (
             <div>
-              <h2>Agregar Usuario</h2>
+              <h2 className="text-center m-3">Agregar Usuario</h2>
               <AddUserForm addUser={addUser} />
             </div>
           )}
@@ -66,4 +66,3 @@ function App() {
 }
 
 export default App;
-  

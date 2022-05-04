@@ -2,7 +2,7 @@ import React from "react";
 const UserTable = (props) => {
   console.log(props.users);
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
           <th>Nombre</th>

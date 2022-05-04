@@ -17,25 +17,34 @@ const AddUserForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Nombre</label>
       <input
+        className="form-control"
+        placeholder="Ingrese nombre"
         type="text"
         name="name"
         {...register("name", {
-          required: { value: true, message: "nombre Requerido" },
+          required: { value: true, message: "NOMBRE REQUERIDO" },
         })}
       />
+      <hr />
       <div>{errors?.name?.message}</div>
-      <label>Usuario</label>
+
       <input
+        className="form-control"
+        placeholder="Ingrese su usuario"
         type="text"
         name="username"
         {...register("username", {
-          required: { value: true, message: "nombre de usuario Requerido" },
+          required: { value: true, message: "USUARIO REQUERIDO" },
         })}
       />
       <div>{errors?.username?.message}</div>
-      <button type="submit">Agregar Usuario</button>
+      <div className="d-grid gap-2 col-6 mx-auto">
+        {" "}
+        <button type="submit" className="btn btn-success m-3 btn-lg ">
+          Agregar Usuario
+        </button>
+      </div>
     </form>
   );
 };
