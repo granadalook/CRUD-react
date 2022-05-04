@@ -2,7 +2,7 @@ import React from "react";
 const UserTable = (props) => {
   console.log(props.users);
   return (
-    <table className="table">
+    <table className="table table-bordered">
       <thead>
         <tr>
           <th>Nombre</th>
@@ -18,13 +18,13 @@ const UserTable = (props) => {
               <td>{user.username}</td>
               <td>
                 <button
-                  className="button muted-button"
+                  className="btn btn-outline-info btn-sm me-2"
                   onClick={() => props.editRow(user)}
                 >
                   Editar
                 </button>
                 <button
-                  className="button muted-button"
+                  className="btn btn-outline-danger btn-sm"
                   onClick={() => props.deleteUser(user.id)}
                 >
                   Delete

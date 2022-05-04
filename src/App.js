@@ -3,6 +3,8 @@ import EditUserForm from "./components/EditUserForm";
 import AddUserForm from "./components/AddUserForm";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Header from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const usersData = [
@@ -41,26 +43,28 @@ function App() {
   };
   return (
     <div className="container">
-      <h1>CRUD App with Hooks</h1>
+      <Header />
+      <h1 className="text-center m-5 fw-bold">Interfaz de usuarios</h1>
       <div className="flex-row">
         <div className="flex-large">
           {editing ? (
             <div>
-              <h2 className="text-center m-3">Editar Usuario</h2>
+              <h2 className="text-center m-3 fw-bold">Editar usuario</h2>
               <EditUserForm currentUser={currentUser} updataUser={updataUser} />
             </div>
           ) : (
             <div>
-              <h2 className="text-center m-3">Agregar Usuario</h2>
+              <h2 className="text-center m-3 fw-bold">Agregar usuario</h2>
               <AddUserForm addUser={addUser} />
             </div>
           )}
         </div>
         <div className="flex-large">
-          <h2>View users</h2>
+          <h2 className="text-center m-3 fw-bold">Tabla de usuarios</h2>
           <UserTable users={users} deleteUser={deleteUser} editRow={editRow} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
