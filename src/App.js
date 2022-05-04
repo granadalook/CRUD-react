@@ -11,11 +11,7 @@ function App() {
     { id: uuidv4(), name: "Ben", username: "benisphere" },
   ];
   const [users, setUsers] = useState(usersData);
-  const sujeto = {
-    nombre: " Stiven",
-    urlImage: "https://via.placeholder.com/64",
-    text: " no me quiero bañar ",
-  };
+
   const addUser = (user) => {
     user.id = uuidv4();
     setUsers([...users, user]);
@@ -70,3 +66,4 @@ function App() {
 }
 
 export default App;
+  
