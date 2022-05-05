@@ -2,10 +2,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-primary bg-light fw-bold ms-5">
-      <div class="container-fluid">
+    <nav className="navbar navbar-primary bg-light fw-bold ms-5">
+      <div className="container-fluid">
         <a
-          class="navbar-brand"
+          className="navbar-brand"
           href="https://www.sofka.com.co/es/inicio/"
           target="_blank"
         >

@@ -10,7 +10,6 @@ const AddUserForm = (props) => {
 
   const onSubmit = (data, e) => {
     data.id = null;
-    console.log(data);
     props.addUser(data); // enviar nuevo usuario
     e.target.reset(); //  limpiar campos
   };

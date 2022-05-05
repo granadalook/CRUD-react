@@ -7,22 +7,20 @@ import Header from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
-  const usersData = [
-    { id: uuidv4(), name: "Tania", username: "floppydiskette" },
-    { id: uuidv4(), name: "Craig", username: "siliconeidolon" },
-    { id: uuidv4(), name: "Ben", username: "benisphere" },
-  ];
-  const [users, setUsers] = useState(usersData);
+  const [users, setUsers] = useState([]);
+  const [editing, setEditing] = useState(false);
+  localStorage.setItem("users", JSON.stringify(users));
 
   const addUser = (user) => {
     user.id = uuidv4();
     setUsers([...users, user]);
+    localStorage.setItem("users", JSON.stringify(users));
   };
+
   const deleteUser = (id) => {
     setUsers(users.filter((user) => user.id !== id));
   };
 
-  const [editing, setEditing] = useState(false);
   const [currentUser, setCurrentUSer] = useState({
     id: null,
     name: "",
